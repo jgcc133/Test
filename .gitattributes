@@ -1,2 +1,15 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+<?php
+
+  $botToken = "343627837:AAEitTs2ET52Gn9JY0kcgynGmyoCkjfYY5s";
+	$website = "https://api.telegram.org/bot".$botToken;
+
+	$update = file_get_contents($website."/getupdates");
+
+	$updateArray = json_decode($update,TRUE);
+
+	echo $updateArray;
+
+?>
